@@ -1,6 +1,6 @@
 # Baseline looks
 
-Colour schemes for **Baseline**, a personal desktop system built on [Omarchy](https://omarchy.org) (Arch Linux + Hyprland). The mood is gritty neon noir: *Blade Runner 2049*, rain on Tokyo glass, sodium light through smog.
+Colour schemes for **[Baseline](https://github.com/mortalfish-studio/baseline)**, a personal desktop system built on [Omarchy](https://omarchy.org) (Arch Linux + Hyprland). The mood is gritty neon noir: *Blade Runner 2049*, rain on Tokyo glass, sodium light through smog.
 
 A look is a full palette that Baseline turns into Day, Night and Saver themes for the whole desktop: windows, bar, terminal, prompt, Chrome, the code editor, and even the mouse's lights. A look can also suggest pictures to go with it.
 
@@ -46,11 +46,12 @@ You can also open a pull request by hand: copy the format of an existing look an
 
 ## About Baseline
 
-Baseline is one person's Omarchy setup that grew into a small system, shared as-is for anyone to take apart and reuse:
+[Baseline](https://github.com/mortalfish-studio/baseline) is one person's Omarchy setup that grew into a small system, open source (MIT) for anyone to take apart and reuse:
 - **the bar panel**: system readout, music player, status, wallpapers, looks, and setup (mouse lighting and buttons, dictation, health)
 - **Baseline Studio**: picture library and look maker, including a palette suggested from a picture
-- **OmaRelay**: voice control for switching workspaces, opening apps and handing off questions and coding tasks
+- **[OmaRelay](https://github.com/mortalfish-studio/omarelay)**: voice control for switching workspaces, opening apps and handing off questions and coding tasks
 - **health check & repair**: puts everything back after an Omarchy update
+- **a clean uninstall**: the installer takes a snapshot first, and `afterlight uninstall` puts your system back as it was
 
 ![Baseline's Setup tab: health, battery care and the mouse](docs/setup.png)
 
@@ -60,7 +61,13 @@ It's built around the tools it was made with:
 - [Superwhisper](https://superwhisper.com) for dictation
 - [Google Chrome](https://www.google.com/chrome/), with a small add-on that drives [Beatport](https://www.beatport.com) and [YouTube Music](https://music.youtube.com)
 
-Swapping in your own coding and chat agents (Herdr, Claude, ChatGPT…) is a matter of changing a few commands.
+Swapping in your own coding and chat apps (Herdr, Claude, ChatGPT…) starts in Setup → Apps; see [adapting Baseline](https://github.com/mortalfish-studio/baseline/blob/main/docs/adapting.md).
+
+To try it on an Omarchy machine (read [what it changes](https://github.com/mortalfish-studio/baseline/blob/main/docs/system-changes.md) first):
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/mortalfish-studio/baseline/main/install.sh)
+```
 
 **Built on one machine:** a Microsoft Surface Laptop 7 (Snapdragon X Elite, ARM64, 2304×1536 at 1.5×) with a **Razer Basilisk V3** mouse. Most of Baseline is ordinary Omarchy configuration, but two parts are tied to that hardware:
 - **The mouse lighting and extra buttons** read the Basilisk V3 directly. They're unlikely to work with any other mouse without real changes.
